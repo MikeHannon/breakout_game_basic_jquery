@@ -13,7 +13,8 @@
   ); // calls the jquery with document selected's  ready method with a parameter function
 
   function setUpGame(){  // calls the initial game setup
-    $('body').html(""); // clears the body for a reset.
+    $('body').html("<h2>Balls: 5 Score: <span id='score'>0</span></h2>"); // clears the body for a reset.
+
     buildBricks();
     buildPaddle();
     buildStartButton();
@@ -29,7 +30,7 @@
   }
 
   function buildPaddle(){
-    $("body").append("<button>paddle</button>");
+    $("body").append("<button id = 'button'>paddle</button>");
   }
 
   function buildStartButton(){

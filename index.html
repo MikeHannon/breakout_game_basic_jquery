@@ -8,8 +8,29 @@
   $(document).ready(
     function(){
       console.log("hello");
+      setUpGame(); // calls the setup game function.
     }
   ); // calls the jquery with document selected's  ready method with a parameter function
+
+  function setUpGame(){  // calls the initial game setup
+    $('body').html(""); // clears the body for a reset.
+    buildBricks();
+    buildPaddle();
+    buildStartButton();
+    buildBall();
+  }
+
+  function buildBricks(){
+    for (var i = 0; i < 10; i ++){
+      for (var j = 0; j < 6; j ++){
+        $(body).add("<button>brick</button>");
+      }
+    }
+  }
+
+  function buildPaddle(){
+    $(body).add("<button>paddle</button>");
+  }
 
   </script>
 </head>

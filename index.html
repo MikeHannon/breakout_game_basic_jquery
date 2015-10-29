@@ -19,11 +19,13 @@
     buildPaddle();
     buildStartButton();
     buildBall();
+    buildRestart();
+    positionBricks();
   }
 
   function buildBricks(){
-    for (var i = 0; i < 10; i ++){
-      for (var j = 0; j < 6; j ++){
+    for (var i = 0; i < 6; i ++){
+      for (var j = 0; j < 10; j ++){
         $("body").append("<button class = 'brick row"+i+" column"+j+"'>brick</button>");
       }
     }
@@ -41,6 +43,20 @@
   function buildBall(){
     $('body').append("<span>o</span>");
   }
+
+  function buildRestart(){
+    $('body').append("<button id = 'restart'> RESTART</button>");
+  }
+
+  function positionBricks(){
+    for (var i = 0; i < 6; i ++){
+      $(".row0").css({
+        // position:absolute,
+        // top: 10%
+      });
+    }
+  }
+
 
   </script>
 </head>

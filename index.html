@@ -23,22 +23,22 @@
   function buildBricks(){
     for (var i = 0; i < 10; i ++){
       for (var j = 0; j < 6; j ++){
-        $(body).add("<button>brick</button>");
+        $("body").append("<button>brick</button>");
       }
     }
   }
 
   function buildPaddle(){
-    $(body).add("<button>paddle</button>");
+    $("body").append("<button>paddle</button>");
   }
 
   function buildStartButton(){
-    $('body').add("<button id = 'start'>START</button>");
+    $('body').append("<button id = 'start'>START</button>");
     $('#start').click(function(){console.log('click me to start');});
   }
 
   function buildBall(){
-    $('body').add("<span>o</span>");
+    $('body').append("<span>o</span>");
   }
 
   </script>

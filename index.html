@@ -21,6 +21,8 @@
     buildBall();
     buildRestart();
     positionBricks();
+    positionPaddle();
+    positionBall();
   }
 
   function buildBricks(){
@@ -32,7 +34,7 @@
   }
 
   function buildPaddle(){
-    $("body").append("<button id = 'button'>paddle</button>");
+    $("body").append("<button id = 'paddle'>paddle</button>");
   }
 
   function buildStartButton(){
@@ -41,7 +43,7 @@
   }
 
   function buildBall(){
-    $('body').append("<span>o</span>");
+    $('body').append("<span id = 'ball'>o</span>");
   }
 
   function buildRestart(){
@@ -49,12 +51,34 @@
   }
 
   function positionBricks(){
+    console.log($('.brick').eq(0).width());
     for (var i = 0; i < 6; i ++){
-      $(".row0").css({
-        // position:absolute,
-        // top: 10%
+      $(".row"+i).css({
+        position:"absolute",
+        top: 100 + 18*i +"px"
+      });
+      }
+    for (var j = 0; j < 10; j ++){
+      $(".column"+j).css({
+        width: "5%",
+        left: 5+ 5*j+"%"
       });
     }
+  }
+  function positionPaddle(){
+    $('#paddle').css({
+      position:"absolute",
+      top: "600px",
+      left: "30%"
+  })
+  }
+  function positionBall(){
+    $('#ball').css({
+      position:"absolute",
+      top: "240px",
+      left: "30%"
+  })
+
   }
 
 

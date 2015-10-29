@@ -32,6 +32,15 @@
     $(body).add("<button>paddle</button>");
   }
 
+  function buildStartButton(){
+    $('body').add("<button id = 'start'>START</button>");
+    $('#start').click(function(){console.log('click me to start');});
+  }
+
+  function buildBall(){
+    $('body').add("<span>o</span>");
+  }
+
   </script>
 </head>
 <body>
